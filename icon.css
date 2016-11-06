@@ -1,0 +1,83 @@
+/* =============================================================================
+  COMPONENT
+============================================================================= */
+
+.component__title {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* =============================================================================
+  ICONS - COMMON
+============================================================================= */
+/**
+ * Icon common styles.
+ *
+ * Set it to block or inline block, whichever suits your needs. Overflow set to
+ * hidden for precautions, and make sure to set the font size to 0 and the text
+ * indent to -9999px. This allows us to actually include text in the markup
+ * which will be good for screen readers and accessibility purposes.
+ */
+.icon {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  margin: 4px;
+  width: 96px;
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+/* =============================================================================
+  ICONS - DEMO 1
+============================================================================= */
+/**
+ * "icon-mono" class name used to indicate monochrome-type icon. Use whatever
+ * class name you want, but make sure to change it up in the markup.
+ *
+ * Example HTML:
+ *
+ * <a href="#" class="icon icon-mono facebook">facebook</a>
+ * <a href="#" class="icon icon-mono twitter">twitter</a>
+ * ...
+ */
+.icon-mono {
+  background: url("img/icons1.png");
+  background-image: url("img/icons1.svg"), none;
+  background-color: #595959;
+  -webkit-transition: background 0.3s;
+          transition: background 0.3s;
+}
+
+/* facebook */
+.icon-mono.facebook {
+  background-position: 0 0;
+}
+
+.icon-mono.facebook:hover {
+  background-color: #3b5998;
+  background-position: 0 -96px;
+}
+
+/* twitter */
+.icon-mono.twitter {
+  background-position: -96px 0;
+}
+
+.icon-mono.twitter:hover {
+  background-color: #4099ff;
+  background-position: -96px -96px;
+}
+
+/* github */
+.icon-mono.github {
+  background-position: -288px 0;
+}
+
+.icon-mono.github:hover {
+  background-color: #00ea00;
+  background-position: -288px -96px;
+}
