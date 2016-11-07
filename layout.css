@@ -5,6 +5,12 @@ body {
   color: #eceff1;
   line-height: 1.5; }
 
+  th {
+    text-align: left;
+    padding-right: 4em;
+    padding-bottom: 1em;
+  }
+
 @media screen and (min-width: 500px) {
   body {
     font-size: 1em; } }
