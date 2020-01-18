@@ -1,0 +1,24 @@
+version: "3.7"
+services:
+  portfolio:
+    image: ivorsco77/portfolio
+    networks:
+      - ivor-traefik-public
+    deploy:
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.frontend.rule=Host:hire.ivorscott.com
+        - traefik.enable=true
+        - traefik.port=80
+        - traefik.tags=ivor-traefik-public
+        - traefik.docker.network=ivor-traefik-public
+        # Traefik service that listens to HTTP
+        - traefik.redirectorservice.frontend.entryPoints=http
+        - traefik.redirectorservice.frontend.redirect.entryPoint=https
+        # Traefik service that listens to HTTPS
+        - traefik.webservice.frontend.entryPoints=https
+
+networks:
+  ivor-traefik-public:
+    external: true
