@@ -52,6 +52,12 @@
   transition: background 0.3s;
 }
 
+.icon-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .icon-plain {
   background-color: #595959;
 }
@@ -88,17 +94,16 @@
 
 /* github */
 .icon-plain.blog {
-  color: #fff;
-  text-align: center;
-  text-indent: 0px;
-  font-size: 24px;
-  font-weight: bold;
-}
-.blog-icon-text {
-  position: relative;
-  top: 27px;
+    color: #898989;
+    text-indent: 0px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'ProximaNova-Bold';
 }
 
 .icon-plain.blog:hover {
+  color: #fff;
   background-color: #ea009c;
 }
